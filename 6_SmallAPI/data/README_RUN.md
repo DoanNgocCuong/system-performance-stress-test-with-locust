@@ -71,3 +71,5 @@ XỬ LÝ 5 DÒNG ĐẦU TIÊN
 - Cột `BOT_RESPONSE_CONVERSATION_with_USER` phải chứa JSON string dạng list of dictionaries
 - Script sẽ tự động tạo cột `new_data` mới
 
+
+

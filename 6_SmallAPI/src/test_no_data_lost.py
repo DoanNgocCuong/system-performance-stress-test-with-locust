@@ -68,3 +68,5 @@ if loader:
     print(f"✅ Tất cả dữ liệu đều có thể được sử dụng (có thể bị truncate)")
     print(f"✅ Random từ tất cả {total_data} dòng, không lọc bỏ")
 
+
+

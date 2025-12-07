@@ -87,3 +87,5 @@ if fail_count > 0:
     for i, reason in enumerate(set(fail_reasons), 1):
         print(f"  {i}. {reason}")
 
+
+
