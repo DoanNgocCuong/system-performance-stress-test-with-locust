@@ -125,3 +125,8 @@ Khi bạn xem Locust dashboard, các metrics sau đều là **response time từ
 
 **Tất cả đều đo từ khi gửi request đến khi nhận được response từ server.**
 
+
+
+
+
+

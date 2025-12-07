@@ -2,7 +2,7 @@
 curl --location 'http://124.197.20.86:7862/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --data '{
-    "model": "Qwen/Qwen3-1.7B",
+    "model": "Qwen/Qwen3-0.6B",
     "messages": [
         {
             "role": "system",
@@ -21,3 +21,5 @@ curl --location 'http://124.197.20.86:7862/v1/chat/completions' \
     }
 }'
 ```
+
+---

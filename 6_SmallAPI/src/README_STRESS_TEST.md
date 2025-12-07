@@ -99,7 +99,7 @@ EXCEL_DATA_PATH=D:\GIT\locust_stresst_Testing\6_SmallAPI\data\result_all_rows.xl
 # API Configuration
 QWEN_API_BASE_URL=http://124.197.20.86:7862
 QWEN_API_CHAT_COMPLETIONS_ENDPOINT=/v1/chat/completions
-QWEN_API_MODEL_NAME=Qwen/Qwen3-1.7B
+QWEN_API_MODEL_NAME=Qwen/Qwen3-0.6B
 QWEN_API_TEMPERATURE=0.0
 QWEN_API_REPETITION_PENALTY=1.1
 QWEN_API_STREAM=false
@@ -116,7 +116,7 @@ Mỗi request sẽ có format:
 
 ```json
 {
-    "model": "Qwen/Qwen3-1.7B",
+    "model": "Qwen/Qwen3-0.6B",
     "messages": [
         {
             "role": "system",
@@ -161,4 +161,9 @@ Nếu không load được Excel, script sẽ tự động sử dụng dữ li�
 Sau khi chạy, bạn sẽ có:
 - HTML report: `6_SmallAPI/results/report_YYYYMMDD_HHMMSS.html`
 - CSV files: `6_SmallAPI/results/results_YYYYMMDD_HHMMSS_*.csv`
+
+
+
+
+
 

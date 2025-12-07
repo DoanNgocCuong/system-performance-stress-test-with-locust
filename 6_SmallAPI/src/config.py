@@ -1,5 +1,5 @@
 """
-Configuration module cho Locust test của Qwen3-1.7B API.
+Configuration module cho Locust test của Qwen3-0.6B API.
 Hỗ trợ đọc cấu hình từ file .env ở thư mục dự án.
 """
 
@@ -49,7 +49,7 @@ class Config:
 
     # Base URL của API server
     BASE_URL = os.getenv(
-        "QWEN_API_BASE_URL", "http://124.197.20.86:7862"
+        "QWEN_API_BASE_URL", "http://103.253.20.30:7862"
     )
 
     # API Endpoint
@@ -61,7 +61,7 @@ class Config:
     # Model name
     MODEL_NAME = os.getenv(
         "QWEN_API_MODEL_NAME",
-        "Qwen/Qwen3-1.7B",
+        "Qwen/Qwen3-0.6B",
     )
 
     # API Parameters
@@ -105,8 +105,8 @@ class Config:
     )
 
     # Wait time giữa các requests (giây)
-    WAIT_TIME_MIN = _get_float("QWEN_API_WAIT_MIN", 1.0)
-    WAIT_TIME_MAX = _get_float("QWEN_API_WAIT_MAX", 3.0)
+    WAIT_TIME_MIN = _get_float("QWEN_API_WAIT_MIN", 0.01)
+    WAIT_TIME_MAX = _get_float("QWEN_API_WAIT_MAX", 0.1)
 
     # Headers mặc định
     DEFAULT_HEADERS = {

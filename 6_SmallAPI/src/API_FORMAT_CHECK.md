@@ -141,7 +141,7 @@ Chạy `python test_api_format.py`:
 
 ```json
 {
-  "model": "Qwen/Qwen3-1.7B",
+  "model": "Qwen/Qwen3-0.6B",
   "messages": [
     {
       "role": "system",
@@ -162,4 +162,9 @@ Chạy `python test_api_format.py`:
 ```
 
 ✅ **Hoàn toàn khớp với format API trong README!**
+
+
+
+
+
 

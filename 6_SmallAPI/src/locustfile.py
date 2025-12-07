@@ -1,5 +1,5 @@
 """
-Locust test cho Qwen3-1.7B API:
+Locust test cho Qwen3-0.6B API:
 - API /v1/chat/completions
 
 Mỗi user sẽ gửi requests ngẫu nhiên với các test cases khác nhau.
@@ -79,6 +79,31 @@ class QwenAPIUser(HttpUser):
                     return False
             except json.JSONDecodeError:
                 response.failure(f"Invalid JSON response: {response.text[:500]}")
+                return False
+        elif response.status_code == 400:
+            # Xử lý đặc biệt cho lỗi 400 (có thể là context length exceeded)
+            try:
+                error_data = response.json()
+                error_msg = error_data.get("error", {}).get("message", "")
+                
+                # Nếu là lỗi context length, đánh dấu là skip (không phải fail)
+                if "context length" in error_msg.lower() or "maximum context" in error_msg.lower():
+                    response.failure(
+                        f"Context length exceeded (data too long): {error_msg[:200]}"
+                    )
+                    # Vẫn đánh dấu là failure nhưng với message rõ ràng
+                    return False
+                else:
+                    # Lỗi 400 khác
+                    response.failure(
+                        f"Bad Request (400): {error_msg[:200]}"
+                    )
+                    return False
+            except (json.JSONDecodeError, KeyError):
+                # Không parse được error, đánh dấu là fail thông thường
+                response.failure(
+                    f"Bad Request (400): {response.text[:500]}"
+                )
                 return False
         else:
             response.failure(

@@ -61,3 +61,8 @@ if loader:
     else:
         print("\n⚠️  Payload 1 và Payload 2 GIỐNG NHAU (rất hiếm với random)")
 
+
+
+
+
+

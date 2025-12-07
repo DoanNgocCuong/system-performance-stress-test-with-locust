@@ -62,3 +62,8 @@ else:
     print(f"\n❌ File không tồn tại: {excel_path}")
     print(f"   Hãy chạy: cd 6_SmallAPI/data && python generate_new_data.py --all")
 
+
+
+
+
+

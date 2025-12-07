@@ -37,7 +37,7 @@ if excel_path.exists():
         
         # Kiểm tra các trường bắt buộc
         checks = {
-            "model": "model" in payload_dict and payload_dict["model"] == "Qwen/Qwen3-1.7B",
+            "model": "model" in payload_dict and payload_dict["model"] == "Qwen/Qwen3-0.6B",
             "messages": "messages" in payload_dict and isinstance(payload_dict["messages"], list),
             "temperature": "temperature" in payload_dict and payload_dict["temperature"] == 0.0,
             "repetition_penalty": "repetition_penalty" in payload_dict and payload_dict["repetition_penalty"] == 1.1,
@@ -92,4 +92,9 @@ if excel_path.exists():
         traceback.print_exc()
 else:
     print(f"\n❌ File không tồn tại: {excel_path}")
+
+
+
+
+
 

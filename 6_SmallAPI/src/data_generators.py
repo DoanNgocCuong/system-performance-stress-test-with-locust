@@ -1,5 +1,5 @@
 """
-Module sinh dữ liệu test cho Qwen3-1.7B API Locust test.
+Module sinh dữ liệu test cho Qwen3-0.6B API Locust test.
 Tuân thủ nguyên tắc Single Responsibility:
 - Chỉ chịu trách nhiệm tạo test data cho API chat/completions.
 """
